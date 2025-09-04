@@ -16,11 +16,20 @@ public class CrudRepositoryTestRunner implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
+		/*
 		Artist artist = new Artist("Sara", "Heroine", 60000.0);
 		
 		try {
 			String msg = artistService.registerArtist(artist);
 			System.out.println(msg);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		*/
+		
+		try {
+			System.out.println("Artist available or not? "+artistService.checkArtistAvailability(15));
 		}
 		catch(Exception e) {
 			e.printStackTrace();

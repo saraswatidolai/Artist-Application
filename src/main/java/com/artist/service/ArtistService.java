@@ -19,4 +19,12 @@ public class ArtistService implements IArtistService {
 		return "Artist Registered successfully "+art;
 	}
 
+	@Override
+	public boolean checkArtistAvailability(int id) {
+		
+		boolean check = artistRepo.existsById(id);
+		return check;
+	}
+	
+
 }
