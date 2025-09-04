@@ -3,6 +3,7 @@ A Spring Boot application that demonstrates **CRUD operations** using **Spring D
 Feature
 -------
 - **Register New Artist**  - using save(Artist artist) method
+- **Check Artist availability by Id**  - using boolean existById(int id) method
 
 Tech Stack
 ----------
