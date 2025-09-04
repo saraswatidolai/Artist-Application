@@ -28,8 +28,17 @@ public class CrudRepositoryTestRunner implements CommandLineRunner {
 		}
 		*/
 		
+		/*
 		try {
 			System.out.println("Artist available or not? "+artistService.checkArtistAvailability(15));
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		*/
+		
+		try {
+			System.out.println("Total number of artist: "+artistService.showArtistCount());
 		}
 		catch(Exception e) {
 			e.printStackTrace();

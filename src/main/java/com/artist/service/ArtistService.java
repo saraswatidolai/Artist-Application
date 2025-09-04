@@ -25,6 +25,11 @@ public class ArtistService implements IArtistService {
 		boolean check = artistRepo.existsById(id);
 		return check;
 	}
+
+	@Override
+	public long showArtistCount() {
+		return artistRepo.count();
+	}
 	
 
 }

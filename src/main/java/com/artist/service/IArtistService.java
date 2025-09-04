@@ -7,4 +7,6 @@ public interface IArtistService {
 	public String registerArtist(Artist artist);
 	
 	public boolean checkArtistAvailability(int id);
+	
+	public long showArtistCount();
 }
