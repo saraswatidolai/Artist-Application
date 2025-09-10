@@ -1,5 +1,7 @@
 package com.artist.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +31,12 @@ public class ArtistService implements IArtistService {
 	@Override
 	public long showArtistCount() {
 		return artistRepo.count();
+	}
+
+	@Override
+	public String registerArtistBatch(List<Artist> list) {
+		Iterable<Artist> saveList = artistRepo.saveAll(list);		
+		return "All Artists are registered successfully"+saveList;
 	}
 	
 
