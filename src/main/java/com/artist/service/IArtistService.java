@@ -17,4 +17,6 @@ public interface IArtistService {
 	public Iterable<Artist> showAllArtists();
 	
 	public Iterable<Artist> showArtistsByIds(Iterable<Integer> ids);
+	
+	public String getArtistById(int id);
 }

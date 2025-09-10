@@ -1,6 +1,7 @@
 package com.artist.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -51,6 +52,15 @@ public class ArtistService implements IArtistService {
 		
 		Iterable<Artist> list = artistRepo.findAllById(ids);
 		return list;
+	}
+
+	@Override
+	public String getArtistById(int id) {
+		Optional<Artist> artist = artistRepo.findById(id);
+		if(!artist.isPresent())
+			return "Artist not found";
+		
+		return "Artist Details: "+artist;
 	}
 	
 

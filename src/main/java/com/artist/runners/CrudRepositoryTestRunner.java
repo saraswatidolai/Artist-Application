@@ -75,10 +75,17 @@ public class CrudRepositoryTestRunner implements CommandLineRunner {
 			e.printStackTrace();
 		} */
 		
-		
+		/*
 		try {
 			Iterable<Artist> list = artistService.showArtistsByIds(List.of(2,3));
 			list.forEach(System.out::println);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}*/
+		
+		try {
+			System.out.println(artistService.getArtistById(4));
 		}
 		catch(Exception e) {
 			e.printStackTrace();
