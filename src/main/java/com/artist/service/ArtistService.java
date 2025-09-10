@@ -38,6 +38,13 @@ public class ArtistService implements IArtistService {
 		Iterable<Artist> saveList = artistRepo.saveAll(list);		
 		return "All Artists are registered successfully"+saveList;
 	}
+
+	@Override
+	public Iterable<Artist> showAllArtists() {
+		
+		Iterable<Artist> list = artistRepo.findAll();
+		return list;
+	}
 	
 
 }

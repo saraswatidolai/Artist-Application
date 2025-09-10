@@ -48,6 +48,7 @@ public class CrudRepositoryTestRunner implements CommandLineRunner {
 			e.printStackTrace();
 		}*/
 		
+		/*
 		try {
 			Artist artist1 = new Artist("Aadilakshmi", "Heroine", 80000.0);
 			Artist artist2 = new Artist("Sukumar", "Hero", 60000.0);
@@ -58,6 +59,14 @@ public class CrudRepositoryTestRunner implements CommandLineRunner {
 			System.out.println(artistService.registerArtistBatch(list));
 		}
 		catch(Exception e) {
+			e.printStackTrace();
+		} */
+		
+		try {
+			Iterable<Artist> list = artistService.showAllArtists();
+			list.forEach(System.out::println);
+		}
+		catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
