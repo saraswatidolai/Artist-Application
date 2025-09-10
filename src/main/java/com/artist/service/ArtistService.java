@@ -62,6 +62,16 @@ public class ArtistService implements IArtistService {
 		
 		return "Artist Details: "+artist;
 	}
+
+	@Override
+	public String registerOrupdateArtist(Artist artist) {
+		
+		artistRepo.save(artist);
+		if(artistRepo.existsById(artist.getArtistId()))
+			return artist.getArtistName()+" Artist updated";
+		
+		return artist.getArtistName()+" Artist Registered successfully";
+	}
 	
 
 }

@@ -84,8 +84,19 @@ public class CrudRepositoryTestRunner implements CommandLineRunner {
 			e.printStackTrace();
 		}*/
 		
+		/*
 		try {
 			System.out.println(artistService.getArtistById(4));
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		*/
+		
+		try {
+			//Artist artist = new Artist(5, "Shifa", "Heroine", 55000.0);  //it register first bcoz there is no id 5 
+			Artist artist = new Artist(5, "Shifa", "Heroine", 60000.0);  //but second time id 5 is there in database so it will update
+			System.out.println(artistService.registerOrupdateArtist(artist));
 		}
 		catch(Exception e) {
 			e.printStackTrace();

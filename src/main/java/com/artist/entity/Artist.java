@@ -22,7 +22,7 @@ public class Artist {
 	
 	@Id
 	@Column(name="artist_id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	//@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer artistId;
 	
 	@NonNull
