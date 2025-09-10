@@ -15,4 +15,6 @@ public interface IArtistService {
 	public String registerArtistBatch(List<Artist> list);
 	
 	public Iterable<Artist> showAllArtists();
+	
+	public Iterable<Artist> showArtistsByIds(Iterable<Integer> ids);
 }

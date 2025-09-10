@@ -45,6 +45,13 @@ public class ArtistService implements IArtistService {
 		Iterable<Artist> list = artistRepo.findAll();
 		return list;
 	}
+
+	@Override
+	public Iterable<Artist> showArtistsByIds(Iterable<Integer> ids) {
+		
+		Iterable<Artist> list = artistRepo.findAllById(ids);
+		return list;
+	}
 	
 
 }

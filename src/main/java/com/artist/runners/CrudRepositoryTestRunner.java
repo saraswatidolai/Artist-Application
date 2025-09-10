@@ -31,6 +31,7 @@ public class CrudRepositoryTestRunner implements CommandLineRunner {
 		}
 		*/
 		
+		
 		/*
 		try {
 			System.out.println("Artist available or not? "+artistService.checkArtistAvailability(15));
@@ -40,6 +41,7 @@ public class CrudRepositoryTestRunner implements CommandLineRunner {
 		}
 		*/
 		
+		
 		/*
 		try {
 			System.out.println("Total number of artist: "+artistService.showArtistCount());
@@ -47,6 +49,7 @@ public class CrudRepositoryTestRunner implements CommandLineRunner {
 		catch(Exception e) {
 			e.printStackTrace();
 		}*/
+		
 		
 		/*
 		try {
@@ -62,11 +65,22 @@ public class CrudRepositoryTestRunner implements CommandLineRunner {
 			e.printStackTrace();
 		} */
 		
+		
+		/*
 		try {
 			Iterable<Artist> list = artistService.showAllArtists();
 			list.forEach(System.out::println);
 		}
 		catch (Exception e) {
+			e.printStackTrace();
+		} */
+		
+		
+		try {
+			Iterable<Artist> list = artistService.showArtistsByIds(List.of(2,3));
+			list.forEach(System.out::println);
+		}
+		catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
