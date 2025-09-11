@@ -104,4 +104,11 @@ public class ArtistService implements IArtistService {
 		artistRepo.deleteAll();
 		return "All artist remove sucessfully";
 	}
+
+	@Override
+	public String removeArtistsByIds(Iterable<Integer> ids) {
+
+		artistRepo.deleteAllById(ids);
+		return "selected artists are deleted";
+	}
 }

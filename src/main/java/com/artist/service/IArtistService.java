@@ -26,4 +26,5 @@ public interface IArtistService {
 	
 	public String removeArtistById(int id);
 	public String removeAllArtists();
+	public String removeArtistsByIds(Iterable<Integer> ids);
 }
