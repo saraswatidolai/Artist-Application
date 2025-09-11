@@ -86,6 +86,16 @@ public class ArtistService implements IArtistService {
 		}
 		return "Artist not found to modifiy the fee";
 	}
-	
 
+	@Override
+	public String removeArtistById(int id) {
+		
+		Optional<Artist> opt = artistRepo.findById(id);
+		
+		if(opt.isPresent()) {
+			artistRepo.deleteById(id);
+			return "artist remove sucessfully";
+		}
+		return "artist not found to remove";
+	}
 }

@@ -103,9 +103,17 @@ public class CrudRepositoryTestRunner implements CommandLineRunner {
 			e.printStackTrace();
 		}*/
 		
+		/*
 		try {
 			
 			System.out.println(artistService.hikeArtistFeeByIdAndPercentage(1, 50));
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}*/
+		
+		try {
+			System.out.println(artistService.removeArtistById(6));
 		}
 		catch(Exception e) {
 			e.printStackTrace();
