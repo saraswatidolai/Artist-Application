@@ -72,6 +72,20 @@ public class ArtistService implements IArtistService {
 		
 		return artist.getArtistName()+" Artist Registered successfully";
 	}
+
+	@Override
+	public String hikeArtistFeeByIdAndPercentage(int id, double percentage) {
+		Optional<Artist> opt = artistRepo.findById(id);
+		
+		if(opt.isPresent()) {
+			Artist artist = opt.get();
+			artist.setFee(artist.getFee()+(artist.getFee()*percentage/100.0f));
+			artistRepo.save(artist);
+			
+			return "Artist Fee is modified Successfully";
+		}
+		return "Artist not found to modifiy the fee";
+	}
 	
 
 }
