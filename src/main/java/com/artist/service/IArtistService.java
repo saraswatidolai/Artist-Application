@@ -25,5 +25,5 @@ public interface IArtistService {
 	public String hikeArtistFeeByIdAndPercentage(int id, double percentage);
 	
 	public String removeArtistById(int id);
-	
+	public String removeAllArtists();
 }

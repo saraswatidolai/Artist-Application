@@ -98,4 +98,10 @@ public class ArtistService implements IArtistService {
 		}
 		return "artist not found to remove";
 	}
+
+	@Override
+	public String removeAllArtists() {
+		artistRepo.deleteAll();
+		return "All artist remove sucessfully";
+	}
 }
